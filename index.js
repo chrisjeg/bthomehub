@@ -1,3 +1,5 @@
+"use strict";
+
 var request = require('request-promise');
 var cheerio = require('cheerio');
 var ipAddress = 'http://192.168.1.254/';
