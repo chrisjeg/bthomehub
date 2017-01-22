@@ -1,0 +1,31 @@
+{
+  "name": "bt-homehub",
+  "version": "0.1.0",
+  "description": "Simple getter for bt-homehub information",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisjeg/bthomehub.git"
+  },
+  "keywords": [
+    "bt",
+    "homehub",
+    "bthomehub",
+    "ipdata",
+    "ip"
+  ],
+  "author": "Chris Jeganathan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chrisjeg/bthomehub/issues"
+  },
+  "homepage": "https://github.com/chrisjeg/bthomehub#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1"
+  }
+}
