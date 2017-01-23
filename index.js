@@ -13,7 +13,7 @@ var getConnectedDevices = function(){
 	let devices = {};
 	return request(ipAddress)
 		.then(function (html) {
-	    var $ = cheerio.load(html);
+	    let $ = cheerio.load(html);
 	    $('td').each(function(){
 	    	if($(this).attr('width') === '25%' && 
 	    		$(this).prev().attr('width') === $(this).next().attr('width') &&
@@ -28,8 +28,26 @@ var getConnectedDevices = function(){
 		});
 };
 
+var getInternetStatus = function(){
+	return request(ipAddress)
+		.then(function (html) {
+			let $ = cheerio.load(html);
+			return $('#connection_status').text();
+		});
+};
+
+var getWifiStatus = function(){
+	return request(ipAddress)
+		.then(function (html) {
+			let $ = cheerio.load(html);
+			return $('td:contains("BT Wi-fi Status:")').next().text();
+		});
+};
+
 var actions = {
-	getConnectedDevices: getConnectedDevices
+	getConnectedDevices: getConnectedDevices,
+	getInternetStatus : getInternetStatus,
+	getWifiStatus: getWifiStatus
 };
 
 module.exports = init;

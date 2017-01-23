@@ -1,5 +1,5 @@
 # bthomehub
-A simple screen scraping module that allows you to access basic information available from your homehub. Currently, the only functionality is to get the current connected devices.
+The BT Homehub scraper that you never knew you needed! Currently, only tested on homehub 5.
 
 ## Getting started 
 
@@ -15,6 +15,14 @@ All functions follow a promise structure, for example, to log out connected devi
 
 ```javascript
 homehub
-  .getConnectedDevices
+  .getConnectedDevices()
   .then(x => console.log(x));
+```
+
+Functions currently avaliable are:
+
+```javascript
+homehub.getConnectedDevices(); //Lists all connected device names, their mac addresses and IPs as an object
+homehub.getInternetStatus(); //Returns the current internet connection status as a string
+homehub.getWifiStatus(); //Returns the current wifi status as a string
 ```
