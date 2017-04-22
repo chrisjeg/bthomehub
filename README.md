@@ -1,6 +1,12 @@
 # bthomehub
 The BT Homehub scraper that you never knew you needed! Currently, only tested on homehub 5.
 
+## Download via NPM
+
+```bash
+npm install bt-homehub --save
+```
+
 ## Getting started 
 
 To instantiate the module you can do the following:
@@ -26,3 +32,7 @@ homehub.getConnectedDevices(); //Lists all connected device names, their mac add
 homehub.getInternetStatus(); //Returns the current internet connection status as a string
 homehub.getWifiStatus(); //Returns the current wifi status as a string
 ```
+
+## Contribute
+
+Contributions are welcome and encouraged, feel free to fork and improve in any way you see fit.
